@@ -1,0 +1,304 @@
+body{
+  background-color: var(--background-color);
+  color: var(--color-text);
+}
+
+.header{
+  max-width: 412px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.kursiv{
+  font-family: var(--kursiv-text);
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.box-kursiv{
+  position: relative;
+  padding: 0 35px 45px;
+  font-weight: 400;
+}
+
+.box-kursiv::after{
+  content: 'Birthday Party';
+  position: absolute;
+  font-family: 'Kapakana';
+  font-size: 64px;
+  top: 50px;
+  left: 0;
+  font-weight: 400;
+}
+
+.title{
+  font-family: var(--main-font);
+  font-size: 16px;
+  text-align: center;
+}
+
+.bigbokal{
+  padding-top: 45px;
+}
+
+.main{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 412px;
+  margin: auto;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dear{
+  gap: 23px;
+  padding: 0 38px;
+}
+
+.timing{
+  gap: 2px;
+}
+
+.place{
+  gap: 23px;
+}
+
+.dresscode{
+  padding: 0 38px;
+  gap: 23px;
+}
+
+.cake{
+  margin-top: 12px;
+}
+
+.wishes{
+  padding: 0 36px;
+}
+
+.box-title{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.map-button{
+  margin-top: 23px;
+  background-color: var(--color-text);
+  padding: 3px 3px;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-text{
+  font-family: var(--main-font);
+  color: var(--background-color);
+  padding: 3px 38px;
+  border: 1px solid var(--background-color);
+  border-radius: 8px;
+}
+
+.conteiner-wishes{
+  position: relative;
+  padding: 0 90px;
+}
+
+.conteiner-wishes::after{
+  content: 'Подвердите, пожалуйства, свое пристутсвие';
+  position: absolute;
+  font-family: var(--main-font);
+  font-size: 14px;
+  bottom: 0;
+  left: 0;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  height: auto;
+  transition: height 0.3s ease;
+  max-width: 330px;
+  width: 100%;
+  padding-top: 23px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  border: none;
+  padding: 0;
+  gap: 6px;
+}
+
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-circle {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.input {
+  border-top: 1px solid transparent ;
+  border-left: 1px solid transparent ;
+  border-right: 1px solid transparent ;
+  border-bottom: 1px solid var(--color-text);
+  border-radius: 0;
+  max-width: 330px;
+  width: 100%;
+  height: 21px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.custom-radio:hover .radio-circle {
+  border-color: var(--color-text);
+}
+
+.custom-radio input[type="radio"]:checked + .radio-circle {
+  border-color: var(--color-text);
+  background: var(--color-text);
+}
+
+.radio-text {
+  text-align: left;
+  font-size: 14px;
+  font-family: var(--main-font);
+
+  font-weight: 400;
+}
+
+
+.button {
+  max-width: 330px;
+  width: 100%;
+  transition: all 0.3s ease;
+ height: 28px;
+  justify-self: center;
+  align-self: center;
+
+  background-color: transparent;
+  border: 1px solid var(--color-text);
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+
+.button.touch-pressed {
+  background-color: rgba(168, 164, 164, 0.329);
+  
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--background-color-light);
+    color: var(--hot-pink-color);
+  }
+}
+
+.footer-text {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--hot-pink-color);
+}
+
+.form-send {
+  text-align: center;
+}
+
+.error-text {
+  display: none;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.error-text.show {
+  display: block;
+  animation: show 0.3s ease;
+}
+
+.radio-error {
+  display: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+.radio-error.show {
+  display: block;
+  animation: show 0.3s ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-radio {
+  font-size: 16px;
+  text-align: left;
+}
+
+.checkbox {
+  font-size: 20px;
+}
+
+.error-icon {
+  font-size: 16px;
+}
+
+.input_box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input::placeholder {
+  color: var(--color-text);
+  font-size: 16px;
+
+}
+
+.form-text {
+  font-size: 40px;
+  text-align: center;
+}
+
+.footer{
+  max-width: 412px;
+  margin: auto;
+  padding-top: 3px;
+padding-bottom: 10px;
+}
