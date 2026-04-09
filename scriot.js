@@ -1,5 +1,5 @@
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbwtF6WcCD09BY3r0rCIzzt0cuTa5jAloiOZ6KkdmkIaHxaOmFpv525J1bXRja-F2CCJng/exec";
+  "https://script.google.com/macros/s/AKfycbyQR83GUZJcvA3UUVhpDAKTDsYq38WhhfPcZYWaE8_3TMqc1ebprC5u85ZDavaNBa7JQg/exec";
 const form = document.forms["submit-to-google-sheet"];
 
 form.addEventListener("submit", async (e) => {
@@ -18,7 +18,6 @@ form.addEventListener("submit", async (e) => {
   const newFormData = new FormData();
   newFormData.append("name", formData.get("name"));
   newFormData.append("presence", formData.get("presence"));
-  newFormData.append("drinks", drinksString);
 
   try {
     const response = await fetch(scriptURL, {
